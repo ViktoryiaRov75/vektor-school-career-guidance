@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вектор — профориентация в школе</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="logo"><span class="logo-mark">◈</span><div>вектор<span>.</span><small>путь к профессии</small></div></div>
+      <div class="side-label">РАБОЧЕЕ ПРОСТРАНСТВО</div>
+      <nav id="navigation" aria-label="Разделы"></nav>
+      <div class="side-bottom"><div class="demo-note"><strong>Демонстрационный режим</strong><p>Роли переключаются без входа. Данные хранятся только в этом браузере.</p></div><span class="side-caption">2025 / 2026 УЧЕБНЫЙ ГОД</span></div>
+    </aside>
+    <div class="main-area">
+      <header class="topbar"><div class="crumb"><button id="menuToggle" class="menu-toggle" aria-label="Открыть меню">☰</button>Рабочее пространство <span>/</span> <strong id="currentPage">Обзор</strong></div><div class="identity"><span class="demo-badge">● &nbsp; ДЕМО</span><span id="profileSlot"></span><label for="roleSelect">Роль</label><select id="roleSelect" aria-label="Демонстрационное переключение роли"><option value="admin">Администрация</option><option value="counselor">Профориентолог</option><option value="student">Ученик</option><option value="parent">Родитель</option></select></div></header>
+      <main id="content" class="content" aria-live="polite"></main>
+    </div>
+  </div>
+  <dialog id="editDialog" class="dialog"><form id="editForm"><div class="dialog-top"><div><span class="overline" id="dialogEyebrow">РЕДАКТИРОВАНИЕ</span><h2 id="dialogTitle"></h2></div><button type="button" class="icon-close" id="closeDialog" aria-label="Закрыть">×</button></div><div class="dialog-content" id="dialogFields"></div><div class="dialog-actions"><button type="button" class="button secondary" id="cancelDialog">Отмена</button><button type="submit" class="button primary">Сохранить</button></div></form></dialog>
+  <section id="printArea" aria-hidden="true"></section>
+  <input type="file" id="gradesFile" accept=".csv,text/csv" hidden>
+  <input type="file" id="requirementsFile" accept=".csv,text/csv" hidden>
+</body>
+</html>
